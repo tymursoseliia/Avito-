@@ -1,0 +1,6 @@
+p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-module-size_m-ObXjj', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-paragraph-m-ZXEoT'] | id: None | text: Показать все
+span | class: ['styles-module-text-ImmDp', 'styles-module-text_size_m-WPf25'] | id: None | text: Показать
+                                                                                                                все
+span | class: ['styles-module-text-ImmDp', 'styles-module-text_size_m-WPf25'] | id: None | text: Показать
+                                                                                                            ещё
+                                                                                                            отзывы

@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление и редактирование - Авито</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #000;
+            line-height: 1.5;
+        }
+
+        .header {
+            background: #fff;
+            padding: 16px 24px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00AAFF;
+            letter-spacing: -0.5px;
+        }
+
+        .main-layout {
+            display: flex;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            align-items: flex-start;
+        }
+
+        .container {
+            flex: 1;
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .list-container {
+            flex: 1;
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cancel-edit-btn {
+            font-size: 14px;
+            color: #ff4d4f;
+            cursor: pointer;
+            display: none;
+            font-weight: 500;
+            border: 1px solid #ff4d4f;
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-family: inherit;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-input:focus {
+            border-color: #00AAFF;
+            box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.2);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .file-upload-wrapper {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            border: 2px dashed #00AAFF;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f9ff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .file-upload-wrapper:hover {
+            background-color: #e6f6ff;
+        }
+
+        .file-upload-wrapper input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-upload-text {
+            font-weight: 600;
+            color: #00AAFF;
+            margin-bottom: 4px;
+        }
+        
+        .file-upload-subtext {
+            font-size: 12px;
+            color: #666;
+        }
+
+        #file-list {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #00AAFF;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 12px;
+            font-family: inherit;
+        }
+
+        .submit-btn:hover {
+            background-color: #0099e5;
+        }
+
+        .submit-btn:disabled {
+            background-color: #a3d9f8;
+            cursor: not-allowed;
+        }
+
+        /* List Items */
+        .car-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+
+        .car-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .car-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .car-item-info {
+            flex: 1;
+        }
+
+        .car-item-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .car-item-price {
+            font-weight: 700;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .car-item-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .action-btn {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .action-btn.edit {
+            background: #f0f9ff;
+            color: #00AAFF;
+        }
+
+        .action-btn.edit:hover { background: #e6f6ff; }
+
+        
+        .action-btn.complete {
+            background: #f6ffed;
+            color: #52c41a;
+        }
+
+        .action-btn.complete:hover { background: #d9f7be; }
+        
+        .action-btn.activate {
+            background: #fffbe6;
+            color: #faad14;
+        }
+
+        .action-btn.activate:hover { background: #fff1b8; }
+        
+        .car-item-status {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+        
+        .status-active { background: #e6f7ff; color: #1890ff; }
+        .status-completed { background: #f5f5f5; color: #8c8c8c; }
+
+        .action-btn.delete {
+            background: #fff1f0;
+            color: #ff4d4f;
+        }
+
+        .action-btn.delete:hover { background: #ffccc7; }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #22c33d;
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .toast.error {
+            background: #ff4d4f;
+        }
+    
+        .tabs {
+            display: flex;
+            gap: 24px;
+            margin: 0 auto 24px;
+            max-width: 1200px;
+            padding: 0 24px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .tab {
+            cursor: pointer;
+            padding: 12px 0;
+            font-weight: 600;
+            font-size: 16px;
+            border-bottom: 3px solid transparent;
+            color: #666;
+            margin-right: 24px;
+        }
+        .tab.active {
+            color: #00AAFF;
+            border-bottom-color: #00AAFF;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Make sure file uploads can scroll if too many */
+        #review-file-list, #reply-file-list {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+</style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-logo">Авито</div>
+        <div style="margin-left: 16px; font-weight: 500; color: #666;">Панель управления</div>
+    </div>
+
+    
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('cars', this)">🚘 Автомобили</div>
+        <div class="tab" onclick="switchTab('reviews', this)">💬 Отзывы</div>
+        
+    </div>
+    
+    <div id="cars-tab" class="tab-content active">
+<div class="main-layout">
+        <!-- Форма -->
+        <div class="container">
+            <h1 id="form-title">
+                Новое объявление
+                <span class="cancel-edit-btn" id="cancel-edit-btn" onclick="cancelEdit()">Отменить редактирование</span>
+            </h1>
+            <form id="add-car-form">
+                <input type="hidden" id="edit_car_id">
+                
+                <div class="form-group">
+                    <label class="form-label" for="title">Название автомобиля</label>
+                    <input type="text" id="title" class="form-input" placeholder="Например: Voyah Taishan 1.5 AT" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="year">Год выпуска</label>
+                        <input type="number" id="year" class="form-input" placeholder="2025" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="mileage">Пробег (км)</label>
+                        <input type="number" id="mileage" class="form-input" placeholder="11" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="price">Цена (₽)</label>
+                    <input type="number" id="price" class="form-input" placeholder="9185400" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="description">Описание автомобиля</label>
+                    <textarea id="description" class="form-input" style="height: 150px; resize: vertical;" placeholder="Пример: В наличии в Москве! Идеальное состояние, один владелец."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" id="photo-label">Фотографии (до 10 шт)</label>
+                    <div class="file-upload-wrapper">
+                        <div class="file-upload-text">+ Выбрать фото</div>
+                        <div class="file-upload-subtext" id="photo-subtext">Водяной знак добавится автоматически</div>
+                        <input type="file" id="images" accept="image/*" multiple required>
+                    </div>
+                    <div id="file-list"></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="location">Город</label>
+                        <input type="text" id="location" class="form-input" placeholder="Москва" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="date_str">Дата публикации</label>
+                        <input type="text" id="date_str" class="form-input" placeholder="Сегодня в 12:45" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="badge_text">Текст стикера (зеленый бейдж)</label>
+                    <input type="text" id="badge_text" class="form-input" placeholder="Например: Под заказ">
+                </div>
+
+                <!-- Specifications Section -->
+                <div style="margin-top: 30px; border-top: 1px solid #e0e0e0; padding-top: 20px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 15px; font-family: 'Manrope', sans-serif;">Характеристики</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="spec_generation">Поколение</label>
+                        <input type="text" id="spec_generation" class="form-input" placeholder="Например: I (2025-2026)">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_pts">ПТС</label>
+                        <input type="text" id="spec_pts" class="form-input" placeholder="Например: Не оформлен">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_condition">Состояние</label>
+                        <input type="text" id="spec_condition" class="form-input" placeholder="Например: Не битый">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_modification">Модификация</label>
+                        <input type="text" id="spec_modification" class="form-input" placeholder="Например: 2.0hyb 4WD DHT (1176 л.с.)">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_engine_volume">Объём двигателя</label>
+                        <input type="text" id="spec_engine_volume" class="form-input" placeholder="Например: 2 л">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_engine_type">Тип двигателя</label>
+                        <input type="text" id="spec_engine_type" class="form-input" placeholder="Например: Гибрид">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_transmission">Коробка передач</label>
+                        <input type="text" id="spec_transmission" class="form-input" placeholder="Например: Робот">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_drive">Привод</label>
+                        <input type="text" id="spec_drive" class="form-input" placeholder="Например: Полный">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_equipment">Комплектация</label>
+                        <input type="text" id="spec_equipment" class="form-input" placeholder="Например: 70 kWh Yaoying">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_body_type">Тип кузова</label>
+                        <input type="text" id="spec_body_type" class="form-input" placeholder="Например: Внедорожник 5-дверный">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_color">Цвет</label>
+                        <input type="text" id="spec_color" class="form-input" placeholder="Например: Серый">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_wheel">Руль</label>
+                        <input type="text" id="spec_wheel" class="form-input" placeholder="Например: Левый">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_vin">VIN или номер кузова</label>
+                        <input type="text" id="spec_vin" class="form-input" placeholder="Например: LSV2*************">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Опубликовать</button>
+            </form>
+        </div>
+
+        <!-- Список объявлений -->
+        <div class="list-container">
+            <h1>Существующие объявления</h1>
+            <div id="cars-list">
+                Загрузка...
+            </div>
+        </div>
+    </div>
+
+    
+    </div> <!-- Close cars-tab -->
+    
+    <div id="reviews-tab" class="tab-content">
+        <div class="main-layout">
+            <!-- Форма отзывов -->
+            <div class="container">
+                <h1 id="review-form-title">
+                    Новый отзыв
+                    <span class="cancel-edit-btn" id="review-cancel-edit-btn" onclick="cancelReviewEdit()">Отменить</span>
+                </h1>
+                <form id="add-review-form">
+                    <input type="hidden" id="edit_review_id">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="review_author">Имя автора</label>
+                            <input type="text" id="review_author" class="form-input" placeholder="Например: Иван" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="author_avatar">Аватар автора (необязательно)</label>
+                            <input type="file" id="author_avatar" class="form-input" accept="image/*" style="padding-top: 10px;">
+                            <div id="author-avatar-name" style="font-size: 13px; color: #666; margin-top: 4px;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="review_rating">Оценка (звезды)</label>
+                            <select id="review_rating" class="form-input" required>
+                                <option value="5">5 звезд</option>
+                                <option value="4">4 звезды</option>
+                                <option value="3">3 звезды</option>
+                                <option value="2">2 звезды</option>
+                                <option value="1">1 звезда</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="review_date">Дата отзыва</label>
+                            <input type="text" id="review_date" class="form-input" placeholder="Например: 2 недели назад" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="review_car_title">Название авто</label>
+                            <input type="text" id="review_car_title" class="form-input" placeholder="Audi Q5..." required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="review_comment">Текст комментария клиента</label>
+                        <textarea id="review_comment" class="form-input" rows="4" placeholder="Текст отзыва..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" id="review-photo-label">Фото клиента (к отзыву)</label>
+                        <div class="file-upload-wrapper">
+                            <div class="file-upload-text">+ Выбрать фото</div>
+                            <input type="file" id="review_images" accept="image/*" multiple>
+                        </div>
+                        <div id="review-file-list"></div>
+                    </div>
+                    
+                    <hr style="margin: 32px 0; border: none; border-top: 1px solid #ddd;">
+                    <h2 style="font-size: 18px; margin-bottom: 16px;">Ваш ответ</h2>
+
+                    <div class="form-group">
+                        <label class="form-label" for="review_reply">Текст ответа</label>
+                        <textarea id="review_reply" class="form-input" rows="4" placeholder="С теплыми пожеланиями, Автосалон Автомиг..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" id="reply-photo-label">Фото автосалона (к ответу)</label>
+                        <div class="file-upload-wrapper" style="background-color: #f6ffed; border-color: #52c41a;">
+                            <div class="file-upload-text" style="color: #52c41a;">+ Выбрать фото ответа</div>
+                            <input type="file" id="reply_images" accept="image/*" multiple>
+                        </div>
+                        <div id="reply-file-list"></div>
+                    </div>
+
+                    <!-- Specifications Section -->
+                <div style="margin-top: 30px; border-top: 1px solid #e0e0e0; padding-top: 20px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 15px; font-family: 'Manrope', sans-serif;">Характеристики</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="spec_generation">Поколение</label>
+                        <input type="text" id="spec_generation" class="form-input" placeholder="Например: I (2025-2026)">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_pts">ПТС</label>
+                        <input type="text" id="spec_pts" class="form-input" placeholder="Например: Не оформлен">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_condition">Состояние</label>
+                        <input type="text" id="spec_condition" class="form-input" placeholder="Например: Не битый">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_modification">Модификация</label>
+                        <input type="text" id="spec_modification" class="form-input" placeholder="Например: 2.0hyb 4WD DHT (1176 л.с.)">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_engine_volume">Объём двигателя</label>
+                        <input type="text" id="spec_engine_volume" class="form-input" placeholder="Например: 2 л">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_engine_type">Тип двигателя</label>
+                        <input type="text" id="spec_engine_type" class="form-input" placeholder="Например: Гибрид">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_transmission">Коробка передач</label>
+                        <input type="text" id="spec_transmission" class="form-input" placeholder="Например: Робот">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_drive">Привод</label>
+                        <input type="text" id="spec_drive" class="form-input" placeholder="Например: Полный">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_equipment">Комплектация</label>
+                        <input type="text" id="spec_equipment" class="form-input" placeholder="Например: 70 kWh Yaoying">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_body_type">Тип кузова</label>
+                        <input type="text" id="spec_body_type" class="form-input" placeholder="Например: Внедорожник 5-дверный">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_color">Цвет</label>
+                        <input type="text" id="spec_color" class="form-input" placeholder="Например: Серый">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_wheel">Руль</label>
+                        <input type="text" id="spec_wheel" class="form-input" placeholder="Например: Левый">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="spec_vin">VIN или номер кузова</label>
+                        <input type="text" id="spec_vin" class="form-input" placeholder="Например: LSV2*************">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="review-submit-btn">Опубликовать отзыв</button>
+                </form>
+            </div>
+
+            <!-- Список отзывов -->
+            <div class="list-container">
+                <h1>Существующие отзывы</h1>
+                <div id="reviews-list">
+                    Загрузка...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Автомобиль успешно добавлен!</div>
+
+    
+    
+    </div>
+
+    
+    
+    </div>
+
+    <!-- Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script>
+        const supabaseUrl = 'https://yjhjthhirxjxkbokycat.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqaGp0aGhpcnhqeGtib2t5Y2F0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5NDQ4MjcsImV4cCI6MjA5MjUyMDgyN30.yXO_zbZgTT-oAJOkvnPsrF_YLnK49Cbpl7sn8ioFvOg';
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+        const form = document.getElementById('add-car-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const toast = document.getElementById('toast');
+        const fileInput = document.getElementById('images');
+        const fileList = document.getElementById('file-list');
+        const carsListEl = document.getElementById('cars-list');
+        
+        
+        let selectedFiles = [];
+        let allCars = [];
+
+        // Загрузка машин
+        async function loadAdminCars() {
+            const { data, error } = await supabaseClient.from('cars').select('*').order('created_at', { ascending: false });
+            if (error) {
+                carsListEl.innerHTML = '<span style="color:red">Ошибка загрузки объявлений</span>';
+                return;
+            }
+            allCars = data || [];
+            renderCars();
+        }
+
+        function formatPrice(price) {
+            return price ? price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") : "0";
+        }
+
+        function renderCars() {
+            if (allCars.length === 0) {
+                carsListEl.innerHTML = '<p>Пока нет объявлений.</p>';
+                return;
+            }
+
+            carsListEl.innerHTML = allCars.map(car => {
+                const status = car.status || 'active';
+                const statusLabel = status === 'completed' ? 'Завершено' : 'Активно';
+                const statusClass = status === 'completed' ? 'status-completed' : 'status-active';
+                
+                const toggleBtnClass = status === 'completed' ? 'activate' : 'complete';
+                const toggleBtnText = status === 'completed' ? 'В активные' : 'В завершённые';
+                const newStatus = status === 'completed' ? 'active' : 'completed';
+
+                return `
+                <div class="car-item" style="${status === 'completed' ? 'opacity: 0.7' : ''}">
+                    <img src="${car.image_url || 'https://via.placeholder.com/80'}" alt="${car.title}">
+                    <div class="car-item-info">
+                        <div class="car-item-title">${car.title}</div>
+                        <div class="car-item-price">${formatPrice(car.price)} ₽</div>
+                        <div class="car-item-status ${statusClass}">${statusLabel}</div>
+                    </div>
+                    <div class="car-item-actions">
+                        <button class="action-btn ${toggleBtnClass}" onclick="toggleStatus('${car.id}', '${newStatus}')">${toggleBtnText}</button>
+                        <button class="action-btn edit" onclick="startEdit('${car.id}')">Редактировать</button>
+                        <button class="action-btn delete" onclick="deleteCar('${car.id}')">Удалить</button>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        async function toggleStatus(id, newStatus) {
+            const { error } = await supabaseClient.from('cars').update({ status: newStatus }).eq('id', id);
+            if (error) {
+                showToast('Ошибка изменения статуса: ' + error.message, true);
+            } else {
+                showToast(newStatus === 'completed' ? 'Перенесено в завершенные' : 'Возвращено в активные');
+                loadAdminCars();
+            }
+        }
+
+        // Удаление
+        async function deleteCar(id) {
+            if(!confirm('Вы уверены, что хотите удалить это объявление?')) return;
+            const { error } = await supabaseClient.from('cars').delete().eq('id', id);
+            if (error) {
+                showToast('Ошибка удаления', true);
+            } else {
+                showToast('Объявление удалено!');
+                loadAdminCars();
+                if(document.getElementById('edit_car_id').value === id) cancelEdit();
+            }
+        }
+
+        // Редактирование
+        function startEdit(id) {
+            const car = allCars.find(c => c.id === id);
+            if(!car) return;
+
+            document.getElementById('edit_car_id').value = car.id;
+            document.getElementById('title').value = car.title || '';
+            document.getElementById('year').value = car.year || '';
+            document.getElementById('mileage').value = car.mileage || '';
+            document.getElementById('price').value = car.price || '';
+            document.getElementById('location').value = car.location || '';
+            document.getElementById('date_str').value = car.date_str || '';
+            document.getElementById('badge_text').value = car.badge_text || '';
+            
+            // Настройка UI
+            document.getElementById('form-title').childNodes[0].nodeValue = 'Редактирование ';
+            document.getElementById('cancel-edit-btn').style.display = 'block';
+            submitBtn.textContent = 'Сохранить изменения';
+            
+            // Сброс файлов (фото необязательны при редактировании)
+            fileInput.required = false;
+            document.getElementById('photo-label').textContent = 'Новые фотографии (оставьте пустым, чтобы сохранить старые)';
+            document.getElementById('photo-subtext').textContent = 'При выборе новых фото старые будут удалены';
+            selectedFiles = [];
+            fileList.innerHTML = '';
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cancelEdit() {
+            form.reset();
+            document.getElementById('edit_car_id').value = '';
+            document.getElementById('form-title').childNodes[0].nodeValue = 'Новое объявление ';
+            document.getElementById('cancel-edit-btn').style.display = 'none';
+            submitBtn.textContent = 'Опубликовать';
+            fileInput.required = true;
+            document.getElementById('photo-label').textContent = 'Фотографии (до 10 шт)';
+            document.getElementById('photo-subtext').textContent = 'Водяной знак добавится автоматически';
+            selectedFiles = [];
+            fileList.innerHTML = '';
+        }
+
+        fileInput.addEventListener('change', (e) => {
+            selectedFiles = Array.from(e.target.files).slice(0, 10);
+            fileList.innerHTML = '';
+            selectedFiles.forEach((f, i) => {
+                fileList.innerHTML += `<div>📷 ${f.name} (${(f.size / 1024 / 1024).toFixed(2)} MB)</div>`;
+            });
+        });
+
+        function showToast(message, isError = false) {
+            toast.textContent = message;
+            if(isError) toast.classList.add('error');
+            else toast.classList.remove('error');
+            
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        }
+
+        // Функция наложения водяного знака
+        function applyWatermark(file) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                const url = URL.createObjectURL(file);
+                
+                img.onload = () => {
+                    const MAX_WIDTH = 1200;
+                    const MAX_HEIGHT = 900;
+                    let width = img.width;
+                    let height = img.height;
+                    
+                    if (width > height) {
+                        if (width > MAX_WIDTH) { height *= MAX_WIDTH / width; width = MAX_WIDTH; }
+                    } else {
+                        if (height > MAX_HEIGHT) { width *= MAX_HEIGHT / height; height = MAX_HEIGHT; }
+                    }
+                    
+                    const canvas = document.createElement('canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Рисуем основное фото
+                    ctx.drawImage(img, 0, 0, width, height);
+                    
+                    // Обновляем img.width для расчетов водяного знака
+                    Object.defineProperty(img, 'width', {value: width});
+                    Object.defineProperty(img, 'height', {value: height});
+                    
+                    // Оригинальный водяной знак Авито (4 круга + текст)
+                    const scale = Math.max(img.width / 1000, 0.3); // Масштаб относительно размера фото
+                    const padding = img.width * 0.03;
+                    
+                    // Радиусы кругов
+                    const rCenter = 12 * scale;
+                    const rTop = 5 * scale;
+                    const rBottomLeft = 6.5 * scale;
+                    const rBottomRight = 8.5 * scale;
+                    
+                    const logoWidth = rCenter * 2.5;
+                    
+                    ctx.font = `bold ${50 * scale}px Manrope, Arial`;
+                    const text = "Avito";
+                    const textWidth = ctx.measureText(text).width;
+                    
+                    // Высчитываем правый нижний угол
+                    const startX = img.width - logoWidth - textWidth - padding * 2;
+                    const startY = img.height - rCenter * 3 - padding;
+                    
+                    const cx = startX + rCenter * 1.5;
+                    const cy = startY + rCenter * 1.5;
+                    
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+                    
+                    // Тень для читаемости на любых фото
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+                    ctx.shadowBlur = 6 * scale;
+                    ctx.shadowOffsetX = 1 * scale;
+                    ctx.shadowOffsetY = 2 * scale;
+                    
+                    // Центральный круг
+                    ctx.beginPath();
+                    ctx.arc(cx - rCenter * 0.5, cy, rCenter, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Верхний круг
+                    ctx.beginPath();
+                    ctx.arc(cx - rCenter * 0.8, cy - rCenter * 1.1, rTop, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Нижний левый круг
+                    ctx.beginPath();
+                    ctx.arc(cx - rCenter * 1.6, cy + rCenter * 0.9, rBottomLeft, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Нижний правый круг
+                    ctx.beginPath();
+                    ctx.arc(cx + rCenter * 0.4, cy + rCenter * 1.1, rBottomRight, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Текст
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(text, startX + logoWidth + 8 * scale, cy + rCenter * 0.2);
+                    
+                    // Сбрасываем тень
+                    ctx.shadowColor = 'transparent';
+                    
+                    canvas.toBlob((blob) => {
+                        URL.revokeObjectURL(url);
+                        resolve(blob);
+                    }, 'image/jpeg', 0.9);
+                };
+                img.onerror = reject;
+                img.src = url;
+            });
+        }
+
+        form?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const editId = document.getElementById('edit_car_id').value;
+            
+            if (!editId && selectedFiles.length === 0) {
+                showToast('Выберите хотя бы одно фото', true);
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Обработка...';
+
+            try {
+                let uploadedUrls = [];
+
+                // Загружаем фото только если выбраны новые
+                if (selectedFiles.length > 0) {
+                    for (let i = 0; i < selectedFiles.length; i++) {
+                        submitBtn.textContent = `Загрузка фото ${i + 1} из ${selectedFiles.length}...`;
+                        
+                        const watermarkedBlob = await applyWatermark(selectedFiles[i]);
+                        const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.jpg`;
+                        
+                        const { data: uploadData, error: uploadError } = await supabaseClient.storage
+                            .from('cars')
+                            .upload(fileName, watermarkedBlob, {
+                                contentType: 'image/jpeg',
+                                cacheControl: '3600',
+                                upsert: false
+                            });
+
+                        if (uploadError) throw new Error('Ошибка загрузки фото: ' + uploadError.message);
+
+                        const { data: { publicUrl } } = supabaseClient.storage
+                            .from('cars')
+                            .getPublicUrl(fileName);
+                            
+                        uploadedUrls.push(publicUrl);
+                    }
+                }
+
+                submitBtn.textContent = 'Сохранение объявления...';
+
+                const carData = {
+                    title: document.getElementById('title').value.trim(),
+                    year: parseInt(document.getElementById('year').value),
+                    mileage: parseInt(document.getElementById('mileage').value),
+                    price: parseInt(document.getElementById('price').value),
+                    description: document.getElementById('description').value,
+                    location: document.getElementById('location').value.trim(),
+                    date_str: document.getElementById('date_str').value.trim(),
+                    badge_text: document.getElementById('badge_text').value.trim(),
+                    specs: {
+                        generation: document.getElementById('spec_generation').value.trim(),
+                        pts: document.getElementById('spec_pts').value.trim(),
+                        condition: document.getElementById('spec_condition').value.trim(),
+                        modification: document.getElementById('spec_modification').value.trim(),
+                        engine_volume: document.getElementById('spec_engine_volume').value.trim(),
+                        engine_type: document.getElementById('spec_engine_type').value.trim(),
+                        transmission: document.getElementById('spec_transmission').value.trim(),
+                        drive: document.getElementById('spec_drive').value.trim(),
+                        equipment: document.getElementById('spec_equipment').value.trim(),
+                        body_type: document.getElementById('spec_body_type').value.trim(),
+                        color: document.getElementById('spec_color').value.trim(),
+                        wheel: document.getElementById('spec_wheel').value.trim(),
+                        vin: document.getElementById('spec_vin').value.trim()
+                    }
+                };
+
+                // Обновляем URL только если загрузили новые фото
+                if (uploadedUrls.length > 0) {
+                    carData.image_url = uploadedUrls[0];
+                    carData.image_urls = uploadedUrls;
+                }
+
+                let error = null;
+                
+                if (editId) {
+                    const res = await supabaseClient.from('cars').update(carData).eq('id', editId);
+                    error = res.error;
+                } else {
+                    const res = await supabaseClient.from('cars').insert([carData]);
+                    error = res.error;
+                }
+
+                if (error) throw new Error('Ошибка БД: ' + error.message);
+
+                showToast(editId ? 'Изменения сохранены!' : 'Объявление опубликовано!');
+                cancelEdit();
+                loadAdminCars();
+            } catch (err) {
+                console.error(err);
+                showToast(err.message, true);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = editId ? 'Сохранить изменения' : 'Опубликовать';
+            }
+        });
+
+        // Запуск (moved to bottom)
+
+        
+        
+
+        document.getElementById('company-logo')?.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            showToast("Загрузка логотипа...");
+            try {
+                const fileName = `logo_${Date.now()}_${Math.random().toString(36).substring(7)}.jpg`;
+                const { data: uploadData, error: uploadError } = await supabaseClient.storage
+                    .from('cars')
+                    .upload(fileName, file, { contentType: file.type || 'image/jpeg', cacheControl: '3600' });
+
+                if (uploadError) throw new Error(uploadError.message);
+
+                const { data: { publicUrl } } = supabaseClient.storage.from('cars').getPublicUrl(fileName);
+                companyLogoUrl = publicUrl;
+                
+                const preview = document.getElementById('logo-preview');
+                preview.innerHTML = `<div class="image-preview" style="background-image: url('${companyLogoUrl}')"></div>`;
+                showToast("Логотип загружен!");
+            } catch(e) {
+                console.error(e);
+                showToast("Ошибка загрузки логотипа", true);
+            }
+        });
+
+        document.getElementById('company-about-photos')?.addEventListener('change', async (e) => {
+            const files = Array.from(e.target.files);
+            if (!files.length) return;
+            
+            showToast("Загрузка фотографий...");
+            try {
+                for (let file of files) {
+                    const fileName = `about_${Date.now()}_${Math.random().toString(36).substring(7)}.jpg`;
+                    const { data: uploadData, error: uploadError } = await supabaseClient.storage
+                        .from('cars')
+                        .upload(fileName, file, { contentType: file.type || 'image/jpeg', cacheControl: '3600' });
+
+                    if (uploadError) throw new Error(uploadError.message);
+
+                    const { data: { publicUrl } } = supabaseClient.storage.from('cars').getPublicUrl(fileName);
+                    companyAboutPhotos.push(publicUrl);
+                }
+                renderCompanyAboutPhotos();
+                showToast("Фотографии загружены!");
+            } catch(e) {
+                console.error(e);
+                showToast("Ошибка загрузки фотографий", true);
+            }
+        });
+
+        document.getElementById('company-form')?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('company-submit-btn');
+            btn.innerText = 'Сохранение...';
+            btn.disabled = true;
+
+            const profileData = {
+                name: document.getElementById('company-name').value,
+                rating: document.getElementById('company-rating').value,
+                reviews_count: document.getElementById('company-reviews-count').value,
+                subscribers: document.getElementById('company-subscribers').value,
+                subscriptions: document.getElementById('company-subscriptions').value,
+                address: document.getElementById('company-address').value,
+                logo_url: companyLogoUrl,
+                about_photos: companyAboutPhotos
+            };
+
+            try {
+                const { error } = await supabaseClient.from('company_profile').update(profileData).eq('id', 1);
+                if (error) throw error;
+                showToast('Настройки компании успешно сохранены!');
+            } catch(err) {
+                console.error(err);
+                showToast('Ошибка при сохранении настроек', true);
+            } finally {
+                btn.innerText = 'Сохранить настройки';
+                btn.disabled = false;
+            }
+        });
+
+        // Load profile on start
+        document.addEventListener('DOMContentLoaded', () => {
+                    });
+        // --- END COMPANY PROFILE LOGIC ---
+
+        function switchTab(tabId, el) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId + '-tab').classList.add('active');
+            el.classList.add('active');
+            if (tabId === 'reviews') {
+                loadAdminReviews();
+            } else {
+                loadAdminCars();
+            }
+        }
+
+        const reviewForm = document.getElementById('add-review-form');
+        const reviewSubmitBtn = document.getElementById('review-submit-btn');
+        const reviewsListEl = document.getElementById('reviews-list');
+        
+        let selectedReviewFiles = [];
+        let currentReviewPhotos = [];
+        let currentReplyPhotos = [];
+
+        let selectedReplyFiles = [];
+        let allReviews = [];
+
+        
+        document.getElementById('author_avatar').addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                document.getElementById('author-avatar-name').textContent = '📷 ' + e.target.files[0].name;
+            } else {
+                document.getElementById('author-avatar-name').textContent = '';
+            }
+        });
+
+        document.getElementById('review_images').addEventListener('change', (e) => {
+            selectedReviewFiles = Array.from(e.target.files).slice(0, 5);
+            const list = document.getElementById('review-file-list');
+            renderExistingReviewPhotos();
+        });
+
+        document.getElementById('reply_images').addEventListener('change', (e) => {
+            selectedReplyFiles = Array.from(e.target.files).slice(0, 5);
+            const list = document.getElementById('reply-file-list');
+            renderExistingReplyPhotos();
+        });
+
+        async function loadAdminReviews() {
+            try {
+                const { data, error } = await supabaseClient.from('reviews').select('*').order('created_at', { ascending: false });
+                if (error) {
+                    reviewsListEl.innerHTML = '<span style="color:red">Ошибка БД (отзывы): ' + error.message + '</span>';
+                    return;
+                }
+                allReviews = data || [];
+                renderReviews();
+            } catch (err) {
+                console.error(err);
+                reviewsListEl.innerHTML = '<span style="color:red">Критическая ошибка (отзывы): ' + err.message + '</span>';
+            }
+        }
+
+        function renderReviews() {
+            if (allReviews.length === 0) {
+                reviewsListEl.innerHTML = '<p>Пока нет отзывов.</p>';
+                return;
+            }
+            reviewsListEl.innerHTML = allReviews.map(r => `
+                <div class="car-item">
+                    <div class="car-item-info">
+                        <div class="car-item-title">${r.author_name} - ${r.rating} ⭐</div>
+                        <div style="font-size: 13px; color: #666;">${r.date_text} • ${r.car_title}</div>
+                        <div style="margin-top: 8px; font-size: 14px;">${(r.comment_text || '').substring(0, 100)}...</div>
+                        ${r.reply_text ? `<div style="margin-top: 4px; font-size: 13px; color: #00AAFF;">Ответ: ${r.reply_text.substring(0, 50)}...</div>` : ''}
+                    </div>
+                    <div class="car-item-actions">
+                        <button class="action-btn edit" onclick="startReviewEdit('${r.id}')">Редактировать</button>
+                        <button class="action-btn delete" onclick="deleteReview('${r.id}')">Удалить</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function deleteReview(id) {
+            if(!confirm('Вы уверены, что хотите удалить этот отзыв?')) return;
+            const { error } = await supabaseClient.from('reviews').delete().eq('id', id);
+            if (error) {
+                showToast('Ошибка удаления', true);
+            } else {
+                showToast('Отзыв удален!');
+                loadAdminReviews();
+                if(document.getElementById('edit_review_id').value === id) cancelReviewEdit();
+            }
+        }
+
+        
+        function renderExistingReviewPhotos() {
+            const list = document.getElementById('review-file-list');
+            let html = currentReviewPhotos.map((url, i) => `
+                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <img src="${url}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px; margin-right: 12px;">
+                    <span onclick="removeExistingReviewPhoto(${i})" style="color:red; cursor:pointer; font-size: 14px;">❌ Удалить</span>
+                </div>
+            `).join('');
+            
+            let newFilesHtml = selectedReviewFiles.map(f => `<div>📷 Новый файл: ${f.name}</div>`).join('');
+            list.innerHTML = html + newFilesHtml;
+        }
+
+        function removeExistingReviewPhoto(index) {
+            currentReviewPhotos.splice(index, 1);
+            renderExistingReviewPhotos();
+        }
+
+        function renderExistingReplyPhotos() {
+            const list = document.getElementById('reply-file-list');
+            let html = currentReplyPhotos.map((url, i) => `
+                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <img src="${url}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px; margin-right: 12px;">
+                    <span onclick="removeExistingReplyPhoto(${i})" style="color:red; cursor:pointer; font-size: 14px;">❌ Удалить</span>
+                </div>
+            `).join('');
+            
+            let newFilesHtml = selectedReplyFiles.map(f => `<div>📷 Новый файл: ${f.name}</div>`).join('');
+            list.innerHTML = html + newFilesHtml;
+        }
+
+        function removeExistingReplyPhoto(index) {
+            currentReplyPhotos.splice(index, 1);
+            renderExistingReplyPhotos();
+        }
+
+        function startReviewEdit(id) {
+            const r = allReviews.find(x => x.id === id);
+            if(!r) return;
+
+            document.getElementById('edit_review_id').value = r.id;
+            document.getElementById('review_author').value = r.author_name || '';
+            document.getElementById('author_avatar').value = '';
+            document.getElementById('author-avatar-name').textContent = r.author_avatar ? '📷 Установлен текущий аватар' : '';
+            document.getElementById('review_rating').value = r.rating || '5';
+            document.getElementById('review_date').value = r.date_text || '';
+            document.getElementById('review_car_title').value = r.car_title || '';
+            document.getElementById('review_comment').value = r.comment_text || '';
+            document.getElementById('review_reply').value = r.reply_text || '';
+            
+            document.getElementById('review-form-title').childNodes[0].nodeValue = 'Редактирование отзыва ';
+            document.getElementById('review-cancel-edit-btn').style.display = 'block';
+            reviewSubmitBtn.textContent = 'Сохранить изменения';
+            
+            selectedReviewFiles = [];
+            selectedReplyFiles = [];
+            
+            let reviewFilesHtml = '';
+            if (r.comment_photos && r.comment_photos.length > 0) {
+                reviewFilesHtml = r.comment_photos.map(url => `<div>📷 <a href="${url}" target="_blank" style="color:#00AAFF;">Уже загружено фото</a></div>`).join('');
+            }
+            document.getElementById('review-file-list').innerHTML = reviewFilesHtml;
+            
+            let replyFilesHtml = '';
+            if (r.reply_photos && r.reply_photos.length > 0) {
+                replyFilesHtml = r.reply_photos.map(url => `<div>📷 <a href="${url}" target="_blank" style="color:#52c41a;">Уже загружено фото</a></div>`).join('');
+            }
+            document.getElementById('reply-file-list').innerHTML = replyFilesHtml;
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cancelReviewEdit() {
+            reviewForm.reset();
+            document.getElementById('edit_review_id').value = '';
+            document.getElementById('review-form-title').childNodes[0].nodeValue = 'Новый отзыв ';
+            document.getElementById('review-cancel-edit-btn').style.display = 'none';
+            reviewSubmitBtn.textContent = 'Опубликовать отзыв';
+            selectedReviewFiles = [];
+            selectedReplyFiles = [];
+            document.getElementById('review-file-list').innerHTML = '';
+            document.getElementById('reply-file-list').innerHTML = '';
+        }
+
+        reviewForm?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const editId = document.getElementById('edit_review_id').value;
+            
+            reviewSubmitBtn.disabled = true;
+            reviewSubmitBtn.textContent = 'Обработка...';
+
+            try {
+                let reviewPhotoUrls = [...currentReviewPhotos];
+                let replyPhotoUrls = [...currentReplyPhotos];
+                let author_avatar_url = null;
+                
+                // Upload author avatar if selected
+                const avatarFile = document.getElementById('author_avatar').files[0];
+                if (avatarFile) {
+                    const ext = avatarFile.name.split('.').pop();
+                    const path = `reviews/${Date.now()}_avatar.${ext}`;
+                    const { data, error } = await supabaseClient.storage.from('cars').upload(path, avatarFile);
+                    if (error) throw new Error('Ошибка загрузки аватара автора');
+                    author_avatar_url = supabaseClient.storage.from('cars').getPublicUrl(path).data.publicUrl;
+                } else if (editId) {
+                    const existingReview = allReviews.find(r => r.id === editId);
+                    if (existingReview) author_avatar_url = existingReview.author_avatar;
+                }
+
+                // Upload Review Photos
+                if (selectedReviewFiles.length > 0) {
+                    for (let i = 0; i < selectedReviewFiles.length; i++) {
+                        reviewSubmitBtn.textContent = `Загрузка фото клиента ${i + 1}...`;
+                        const fileName = `reviews/${Date.now()}_rev_${Math.random().toString(36).substring(7)}.jpg`;
+                        const { error: uploadError } = await supabaseClient.storage.from('cars').upload(fileName, selectedReviewFiles[i]);
+                        if (!uploadError) {
+                            const { data: { publicUrl } } = supabaseClient.storage.from('cars').getPublicUrl(fileName);
+                            reviewPhotoUrls.push(publicUrl);
+                        }
+                    }
+                }
+
+                // Upload Reply Photos
+                if (selectedReplyFiles.length > 0) {
+                    for (let i = 0; i < selectedReplyFiles.length; i++) {
+                        reviewSubmitBtn.textContent = `Загрузка фото ответа ${i + 1}...`;
+                        const fileName = `reviews/${Date.now()}_rep_${Math.random().toString(36).substring(7)}.jpg`;
+                        const { error: uploadError } = await supabaseClient.storage.from('cars').upload(fileName, selectedReplyFiles[i]);
+                        if (!uploadError) {
+                            const { data: { publicUrl } } = supabaseClient.storage.from('cars').getPublicUrl(fileName);
+                            replyPhotoUrls.push(publicUrl);
+                        }
+                    }
+                }
+
+                reviewSubmitBtn.textContent = 'Сохранение отзыва...';
+
+                const revData = {
+                    author_name: document.getElementById('review_author').value.trim(),
+                    author_avatar: author_avatar_url,
+                    rating: parseInt(document.getElementById('review_rating').value),
+                    date_text: document.getElementById('review_date').value.trim(),
+                    car_title: document.getElementById('review_car_title').value.trim(),
+                    comment_text: document.getElementById('review_comment').value.trim(),
+                    reply_text: document.getElementById('review_reply').value.trim()
+                };
+
+                revData.comment_photos = reviewPhotoUrls;
+                revData.reply_photos = replyPhotoUrls;
+
+                let error = null;
+                
+                if (editId) {
+                    const res = await supabaseClient.from('reviews').update(revData).eq('id', editId);
+                    error = res.error;
+                } else {
+                    const res = await supabaseClient.from('reviews').insert([revData]);
+                    error = res.error;
+                }
+
+                if (error) throw new Error('Ошибка БД: ' + error.message);
+
+                showToast(editId ? 'Отзыв изменен!' : 'Отзыв добавлен!');
+                cancelReviewEdit();
+                loadAdminReviews();
+            } catch (err) {
+                console.error(err);
+                showToast(err.message, true);
+            } finally {
+                reviewSubmitBtn.disabled = false;
+                reviewSubmitBtn.textContent = editId ? 'Сохранить изменения' : 'Опубликовать отзыв';
+            }
+        });
+        
+        loadAdminCars();
+        loadAdminReviews();
+    </script>
+</body>
+</html>

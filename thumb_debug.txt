@@ -1,0 +1,12 @@
+     if (galleryEl) {
+                    const mainImgWrap = galleryEl.querySelector('[data-marker="image-frame/image-wrapper"]');
+                    const thumbnails = galleryEl.querySelectorAll('[data-marker="image-frame/thumbnail"]');
+                    
+                    let currentIndex = 0;
+                    
+                    function setMainImage(idx) {
+                        currentIndex = idx;
+                        const url = galleryImages[idx];
+                        if(!url) return;
+                        if (mainImgWrap) {
+                            const span = ma
