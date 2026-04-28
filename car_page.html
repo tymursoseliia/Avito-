@@ -310,7 +310,7 @@
             // Redirect breadcrumb links to the main catalog
             const breadcrumbLinks = document.querySelectorAll('[data-marker="breadcrumbs"] a');
             breadcrumbLinks.forEach(link => {
-                link.href = 'clean_avito (1).html';
+                link.href = 'index.html';
             });
             
             
@@ -434,7 +434,7 @@
                 if (link.textContent && (link.textContent.includes('объявлени') || link.textContent.includes('пользователя'))) {
                     // Check if it's the specific seller ads button
                     if (link.classList.contains('css-1cm6pik') || link.textContent.includes('65')) {
-                        link.href = 'clean_avito (1).html';
+                        link.href = 'index.html';
                         const span = link.querySelector('span');
                         if (span) {
                             span.textContent = adsText;
