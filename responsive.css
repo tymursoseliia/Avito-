@@ -57,7 +57,7 @@ img {
     .index-content-wrapper,
     [class*='root_columns_'] {
         flex-direction: column !important;
-        display: flex !important;
+        /* display: flex !important; removed to prevent unhiding SEO blocks */
         width: 100% !important;
     }
 
