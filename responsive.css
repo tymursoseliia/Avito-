@@ -1,8 +1,7 @@
 /* responsive.css - safe version */
+/* Remove forced viewport limits to allow width=1200 scaling */
 html, body {
     overflow-x: hidden !important;
-    max-width: 100vw !important;
-    width: 100% !important;
 }
 
 img {
@@ -10,19 +9,6 @@ img {
     height: auto !important;
 }
 
-/* Only make the explicit fixed widths fluid */
-[style*='width: 1000px'],
-[style*='width: 1366px'],
-[style*='width: 864px'],
-[style*='width: 400px'] {
-    max-width: 100% !important;
-    width: 100% !important;
-}
-
 @media (max-width: 768px) {
-    /* Stack the main profile layout columns */
-    .Column-module-columnChild-NXl1u {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-    }
+    /* Slight adjustments if needed, but width=1200 mostly ignores this */
 }
