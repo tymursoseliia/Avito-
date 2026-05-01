@@ -1,17 +1,7 @@
-/* responsive.css - fixed version */
+/* responsive.css - safe version */
+/* Remove forced viewport limits to allow width scaling */
 html, body {
     overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Force the main layout container to align left and not center-margin */
-.a59caa5db7f98e1d,
-[class*='adba4dc50f72daf1'],
-[class*='_8d1c213637ecd63a'] {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    max-width: none !important;
 }
 
 img {
@@ -19,15 +9,6 @@ img {
     height: auto !important;
 }
 
-/* Ensure the exact-width containers do not push layout */
-.beduin-exact-width {
-    margin-right: 0 !important;
-}
-
-@media (max-width: 1400px) {
-    /* If the screen is small, shift the whole layout to the left to remove the gap */
-    #app > div {
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-    }
+@media (max-width: 768px) {
+    /* Safe overrides */
 }
