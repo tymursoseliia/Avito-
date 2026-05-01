@@ -7,8 +7,8 @@ js_addition = """
             const allElementsText = document.querySelectorAll('a, p, span, div');
             allElementsText.forEach(el => {
                 if (el.children.length === 0 && el.textContent) {
-                    if (el.textContent.includes('GAZTORMOZ')) {
-                        el.textContent = el.textContent.replace(/GAZTORMOZ/g, 'Автомиг');
+                    if (el.textContent.includes('Автомиг')) {
+                        el.textContent = el.textContent.replace(/Автомиг/g, 'Автомиг');
                     }
                     if (el.textContent.includes('Газтормоз')) {
                         el.textContent = el.textContent.replace(/Газтормоз/g, 'Автомиг');

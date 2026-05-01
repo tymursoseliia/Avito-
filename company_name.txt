@@ -1,8 +1,8 @@
-h1 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xl-_KOci', 'styles-module-size_xl_dense-cZIw_', 'styles-module-size_xl-lk8HS', 'styles-module-weight_bold-d5rRC', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xl-NIboT'] | text: GAZTORMOZ | Авто со Всего
+h1 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xl-_KOci', 'styles-module-size_xl_dense-cZIw_', 'styles-module-size_xl-lk8HS', 'styles-module-weight_bold-d5rRC', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xl-NIboT'] | text: Автомиг | Авто со Всего
                                                                                             Мира
-h2 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xxxl-Dnm4u', 'styles-module-size_xxxl_dense-Ai75q', 'styles-module-size_xxxl_compensated-p476D', 'styles-module-size_xxxl-cQoKw', 'styles-module-ellipsis-J1hvZ', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-3xl-JZUau', 'styles-module-root_bottom-kZfi8', 'styles-module-margin-bottom_16-QApk3'] | text: Отзывы о GAZTORMOZ | Авто
+h2 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xxxl-Dnm4u', 'styles-module-size_xxxl_dense-Ai75q', 'styles-module-size_xxxl_compensated-p476D', 'styles-module-size_xxxl-cQoKw', 'styles-module-ellipsis-J1hvZ', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-3xl-JZUau', 'styles-module-root_bottom-kZfi8', 'styles-module-margin-bottom_16-QApk3'] | text: Отзывы о Автомиг | Авто
                                                                                         со Всего Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -157,13 +157,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -318,13 +318,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -479,13 +479,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -640,13 +640,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -801,13 +801,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -963,13 +963,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -1125,13 +1125,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -1287,13 +1287,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -1449,13 +1449,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -1611,13 +1611,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -1773,13 +1773,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -1934,13 +1934,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -2096,13 +2096,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -2258,13 +2258,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -2420,13 +2420,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -2582,13 +2582,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -2744,13 +2744,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -2906,13 +2906,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -3068,13 +3068,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -3230,13 +3230,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -3392,13 +3392,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -3554,13 +3554,13 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
                                                                                                                                         всего
                                                                                                                                         Мира
-h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: GAZTORMOZ
+h5 | class: ['styles-module-root-neN_7', 'styles-module-root-myocF', 'styles-module-size_xm-RKzt0', 'styles-module-size_xm_dense-OkKrJ', 'styles-module-size_xm_compensated-MV7t5', 'styles-module-size_xm-P71H7', 'styles-module-ellipsis-J1hvZ', 'styles-module-ellipsis_oneLine-ZlKYu', 'styles-module-size_dense-HHKZg', 'stylesMarningNormal-module-root-oPKUh', 'stylesMarningNormal-module-header-xm-qyz8Y'] | text: Автомиг
                                                                                                                             |
                                                                                                                             Авто
                                                                                                                             со
@@ -3716,7 +3716,7 @@ p | class: ['styles-module-root-myocF', 'styles-module-size_m-YQSwg', 'styles-mo
                                                                                                                                         теплыми
                                                                                                                                         пожеланиями,
                                                                                                                                         Автосалон
-                                                                                                                                        GAZTORMOZ
+                                                                                                                                        Автомиг
                                                                                                                                         -
                                                                                                                                         Автомобили
                                                                                                                                         со
