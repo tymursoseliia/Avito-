@@ -276,10 +276,10 @@ js_code = """<!-- Supabase JS -->
             });
 
             // Replace logo
-            // The gaztormoz logo is usually a specific img tag
+            // The Автомиг logo is usually a specific img tag
             const allImages = document.querySelectorAll('img');
             allImages.forEach(img => {
-                if (img.src && (img.src.includes('avatar') || img.src.includes('logo') || img.src.includes('gaztormoz') || img.src === 'https://40.img.avito.st/image/1/1.k0QhGba102vP29z7NIf2E26_021P01z.p9tI3XW5mJ_B_8zFQQHkOOTa7M54qK2w2R2B6U99oKk' || img.src.includes('k0QhGba102vP29z7NIf2E26_021P01z.p9tI3XW5mJ_B_8zFQQHkOOTa7M54qK2w2R2B6U99oKk'))) {
+                if (img.src && (img.src.includes('avatar') || img.src.includes('logo') || img.src.includes('Автомиг') || img.src === 'https://70.img.avito.st/image/1/1.ogFkvLa5GOhSG4zuLN6wOkoeDO7WOYzu0hUu6tIfGOo.DD1WHCne7V9xcT0-BplTPVR-nMNUotlxjG7IidMeKtQ' || img.src.includes('k0QhGba102vP29z7NIf2E26_021P01z.p9tI3XW5mJ_B_8zFQQHkOOTa7M54qK2w2R2B6U99oKk'))) {
                     // Let's replace the avatar/logo with Avtomig's logo
                     // Avtomig logo is logo.jpg
                     if (img.parentElement && img.parentElement.tagName === 'DIV' && img.parentElement.classList.contains('_9275a4968c2dc72b')) {
@@ -290,7 +290,7 @@ js_code = """<!-- Supabase JS -->
             
             // Just specifically target the seller logo image
             // We can look for the seller link href
-            const sellerLinks = document.querySelectorAll('a[href*="gaztormoz"]');
+            const sellerLinks = document.querySelectorAll('a[href*="Автомиг"]');
             sellerLinks.forEach(link => {
                 // If it contains an image, it's the logo link
                 const img = link.querySelector('img');
@@ -308,7 +308,7 @@ js_code = """<!-- Supabase JS -->
             const allDivs = document.querySelectorAll('div, span');
             allDivs.forEach(div => {
                 const bg = div.style.backgroundImage;
-                if (bg && (bg.includes('gaztormoz') || bg.includes('54F-uLa4S2hIEYltPNug80IYSW7AGclgCBxJas4RQ2LI'))) {
+                if (bg && (bg.includes('Автомиг') || bg.includes('54F-uLa4S2hIEYltPNug80IYSW7AGclgCBxJas4RQ2LI'))) {
                     div.style.backgroundImage = 'url("logo.jpg")';
                 }
             });
@@ -521,7 +521,7 @@ js_code = """<!-- Supabase JS -->
             // Re-run the logo patch for <img> tags
             const allImages = document.querySelectorAll('img');
             allImages.forEach(img => {
-                if (img.src && (img.src.includes('avatar') || img.src.includes('logo') || img.src.includes('gaztormoz') || img.src === 'https://40.img.avito.st/image/1/1.k0QhGba102vP29z7NIf2E26_021P01z.p9tI3XW5mJ_B_8zFQQHkOOTa7M54qK2w2R2B6U99oKk')) {
+                if (img.src && (img.src.includes('avatar') || img.src.includes('logo') || img.src.includes('Автомиг') || img.src === 'https://70.img.avito.st/image/1/1.ogFkvLa5GOhSG4zuLN6wOkoeDO7WOYzu0hUu6tIfGOo.DD1WHCne7V9xcT0-BplTPVR-nMNUotlxjG7IidMeKtQ')) {
                     if (img.parentElement && img.parentElement.tagName === 'DIV' && img.parentElement.classList.contains('_9275a4968c2dc72b')) {
                         img.src = data.logo_url;
                     }

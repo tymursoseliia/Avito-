@@ -6,7 +6,7 @@ js_addition = """
             const allDivs = document.querySelectorAll('div, span');
             allDivs.forEach(div => {
                 const bg = div.style.backgroundImage;
-                if (bg && (bg.includes('gaztormoz') || bg.includes('54F-uLa4S2hIEYltPNug80IYSW7AGclgCBxJas4RQ2LI'))) {
+                if (bg && (bg.includes('Автомиг') || bg.includes('54F-uLa4S2hIEYltPNug80IYSW7AGclgCBxJas4RQ2LI'))) {
                     div.style.backgroundImage = 'url("https://i.ibb.co/68ZJ2F9/111.jpg")';
                 }
             });"""

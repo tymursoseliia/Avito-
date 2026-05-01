@@ -33,7 +33,7 @@ js_addition = """
             // Re-run the logo patch for <img> tags
             const allImages = document.querySelectorAll('img');
             allImages.forEach(img => {
-                if (img.src && (img.src.includes('avatar') || img.src.includes('logo') || img.src.includes('gaztormoz') || img.src === 'https://40.img.avito.st/image/1/1.k0QhGba102vP29z7NIf2E26_021P01z.p9tI3XW5mJ_B_8zFQQHkOOTa7M54qK2w2R2B6U99oKk')) {
+                if (img.src && (img.src.includes('avatar') || img.src.includes('logo') || img.src.includes('Автомиг') || img.src === 'https://70.img.avito.st/image/1/1.ogFkvLa5GOhSG4zuLN6wOkoeDO7WOYzu0hUu6tIfGOo.DD1WHCne7V9xcT0-BplTPVR-nMNUotlxjG7IidMeKtQ')) {
                     if (img.parentElement && img.parentElement.tagName === 'DIV' && img.parentElement.classList.contains('_9275a4968c2dc72b')) {
                         img.src = data.logo_url;
                     }
