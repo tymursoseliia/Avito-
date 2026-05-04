@@ -369,7 +369,7 @@
     <div class="tabs">
         <div class="tab active" onclick="switchTab('cars', this)">🚘 Автомобили</div>
         <div class="tab" onclick="switchTab('reviews', this)">💬 Отзывы</div>
-        
+        <div class="tab" onclick="switchTab('company-photos', this)">📸 Фото компании</div>
     </div>
     
     <div id="cars-tab" class="tab-content active">
@@ -655,10 +655,37 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <div id="company-photos-tab" class="tab-content">
+        <div class="main-layout">
+            <div class="container">
+                <h1 id="company-photo-form-title">Загрузка фото компании</h1>
+                <form id="add-company-photo-form">
+                    <div class="form-group">
+                        <label class="form-label" id="company-photo-label">Новые фотографии</label>
+                        <div class="file-upload-wrapper">
+                            <div class="file-upload-text">+ Выбрать фото</div>
+                            <input type="file" id="company_images" accept="image/*" multiple required>
+                        </div>
+                        <div id="company-file-list"></div>
+                    </div>
+                    <button type="submit" class="submit-btn" id="company-photo-submit-btn">Загрузить</button>
+                </form>
+            </div>
+            
+            <div class="list-container">
+                <h1>Управление галереей</h1>
+                <p style="margin-bottom: 16px; font-size: 14px; color: #666;">Используйте стрелочки для изменения порядка фото.</p>
+                <div id="company-photos-list" style="display: flex; flex-direction: column; gap: 12px;">
+                    Загрузка...
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="toast" class="toast">Автомобиль успешно добавлен!</div>
 
-    
     
     </div>
 
@@ -1369,8 +1396,139 @@
             }
         });
         
+        // --- COMPANY PHOTOS LOGIC ---
+        const companyPhotoForm = document.getElementById('add-company-photo-form');
+        const companyPhotoSubmitBtn = document.getElementById('company-photo-submit-btn');
+        const companyFileInput = document.getElementById('company_images');
+        const companyFileList = document.getElementById('company-file-list');
+        const companyPhotosListEl = document.getElementById('company-photos-list');
+        
+        let selectedCompanyFiles = [];
+        let allCompanyPhotos = [];
+
+        async function loadCompanyPhotos() {
+            const { data, error } = await supabaseClient.from('company_photos').select('*').order('order_index', { ascending: true });
+            if (error) {
+                companyPhotosListEl.innerHTML = '<span style="color:red">Ошибка загрузки фотографий</span>';
+                return;
+            }
+            allCompanyPhotos = data || [];
+            renderCompanyPhotos();
+        }
+
+        function renderCompanyPhotos() {
+            if (allCompanyPhotos.length === 0) {
+                companyPhotosListEl.innerHTML = '<p>Пока нет фотографий компании.</p>';
+                return;
+            }
+
+            companyPhotosListEl.innerHTML = allCompanyPhotos.map((photo, index) => `
+                <div class="car-item" style="padding: 8px;">
+                    <img src="${photo.url}" alt="Фото компании" style="width: 120px; height: 80px; object-fit: cover;">
+                    <div class="car-item-info" style="display: flex; flex-direction: column; justify-content: center;">
+                        <div class="car-item-title">Фото #${index + 1}</div>
+                        <div class="car-item-status status-active">Порядок: ${photo.order_index}</div>
+                    </div>
+                    <div class="car-item-actions" style="flex-direction: row; align-items: center;">
+                        <button class="action-btn edit" onclick="moveCompanyPhoto('${photo.id}', -1)" ${index === 0 ? 'disabled style="opacity:0.5"' : ''}>⬆️ Выше</button>
+                        <button class="action-btn edit" onclick="moveCompanyPhoto('${photo.id}', 1)" ${index === allCompanyPhotos.length - 1 ? 'disabled style="opacity:0.5"' : ''}>⬇️ Ниже</button>
+                        <button class="action-btn delete" onclick="deleteCompanyPhoto('${photo.id}')">Удалить</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function moveCompanyPhoto(id, direction) {
+            const index = allCompanyPhotos.findIndex(p => p.id === id);
+            if (index < 0) return;
+            const newIndex = index + direction;
+            if (newIndex < 0 || newIndex >= allCompanyPhotos.length) return;
+
+            const currentPhoto = allCompanyPhotos[index];
+            const swapPhoto = allCompanyPhotos[newIndex];
+
+            // Swap order_index
+            const tempOrder = currentPhoto.order_index;
+            currentPhoto.order_index = swapPhoto.order_index;
+            swapPhoto.order_index = tempOrder;
+
+            // Update in DB
+            await supabaseClient.from('company_photos').update({ order_index: currentPhoto.order_index }).eq('id', currentPhoto.id);
+            await supabaseClient.from('company_photos').update({ order_index: swapPhoto.order_index }).eq('id', swapPhoto.id);
+
+            loadCompanyPhotos();
+        }
+
+        async function deleteCompanyPhoto(id) {
+            if(!confirm('Удалить это фото?')) return;
+            const { error } = await supabaseClient.from('company_photos').delete().eq('id', id);
+            if (error) {
+                showToast('Ошибка удаления', true);
+            } else {
+                showToast('Фото удалено!');
+                loadCompanyPhotos();
+            }
+        }
+
+        companyFileInput?.addEventListener('change', (e) => {
+            selectedCompanyFiles = Array.from(e.target.files);
+            companyFileList.innerHTML = '';
+            selectedCompanyFiles.forEach((f) => {
+                companyFileList.innerHTML += `<div>📷 ${f.name} (${(f.size / 1024 / 1024).toFixed(2)} MB)</div>`;
+            });
+        });
+
+        companyPhotoForm?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (selectedCompanyFiles.length === 0) return;
+
+            companyPhotoSubmitBtn.disabled = true;
+            
+            try {
+                // Find max order_index to append
+                let maxOrder = 0;
+                if (allCompanyPhotos.length > 0) {
+                    maxOrder = Math.max(...allCompanyPhotos.map(p => p.order_index || 0));
+                }
+
+                for (let i = 0; i < selectedCompanyFiles.length; i++) {
+                    companyPhotoSubmitBtn.textContent = `Загрузка ${i + 1} из ${selectedCompanyFiles.length}...`;
+                    const file = selectedCompanyFiles[i];
+                    
+                    const fileName = `company/${Date.now()}_${Math.random().toString(36).substring(7)}.jpg`;
+                    
+                    const { error: uploadError } = await supabaseClient.storage.from('cars').upload(fileName, file);
+                    if (uploadError) throw new Error('Ошибка загрузки: ' + uploadError.message);
+                    
+                    const { data: { publicUrl } } = supabaseClient.storage.from('cars').getPublicUrl(fileName);
+                    
+                    maxOrder += 10; // increment order by 10 for each new photo
+                    const photoData = {
+                        url: publicUrl,
+                        order_index: maxOrder
+                    };
+                    
+                    await supabaseClient.from('company_photos').insert([photoData]);
+                }
+                
+                showToast('Фото успешно загружены!');
+                companyPhotoForm.reset();
+                selectedCompanyFiles = [];
+                companyFileList.innerHTML = '';
+                loadCompanyPhotos();
+                
+            } catch (err) {
+                console.error(err);
+                showToast(err.message, true);
+            } finally {
+                companyPhotoSubmitBtn.disabled = false;
+                companyPhotoSubmitBtn.textContent = 'Загрузить';
+            }
+        });
+
         loadAdminCars();
         loadAdminReviews();
+        loadCompanyPhotos();
     </script>
 </body>
 </html>
